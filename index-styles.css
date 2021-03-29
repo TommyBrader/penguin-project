@@ -1,0 +1,91 @@
+/* PIP Logo */
+#pip-logo-image {
+  width: 420px;
+  height: 240px;
+  margin-bottom: 10px;
+}
+
+#pip-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 130px;
+  flex-direction: column;
+}
+
+#logo-caption {
+  text-decoration: underline solid rgb(140, 210, 248);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Links */
+#links {
+  display: flex;
+  justify-content: center;
+}
+
+.middle-links {
+  padding: 20px;
+  border: black 1px solid;
+  text-decoration: none;
+  color: black;
+  border-radius: 10%;
+  margin: 5px;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+
+.middle-links:hover {
+  background-color: rgb(140, 210, 248);
+  color: white;
+}
+
+/* Penguin Background Pictures */
+.penguin-background-pic-ver {
+  width: 150px;
+  height: 225px;
+}
+
+.penguin-background-pic-hor {
+  width: 225px;
+  height: 225px;
+}
+
+#penguin-background-pics {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* Media Queries */
+@media screen and (max-width: 500px) {
+  #pip-logo-image {
+    width: 301px;
+    height: 172px;
+  }
+
+  #pip-logo {
+    margin-top: 90px;
+  }
+
+  #logo-caption {
+    font-size: 0.7rem;
+  }
+
+  .middle-links {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+
+  .penguin-background-pic-ver {
+    width: 110px;
+    height: 165px;
+  }
+
+  .penguin-background-pic-hor {
+    width: 165px;
+    height: 165px;
+  }
+}
