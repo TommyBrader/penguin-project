@@ -8,14 +8,19 @@
 #pip-logo {
   display: flex;
   align-items: center;
-  margin-top: 130px;
+  margin-top: 110px;
   flex-direction: column;
 }
 
-#logo-caption {
+#pip-logo figcaption {
   text-decoration: underline solid rgb(140, 210, 248);
-  margin-bottom: 15px;
-  font-size: 1rem;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#logo-caption-1 {
+  font-weight: bold;
 }
 
 /* Links */
@@ -70,13 +75,13 @@
     margin-top: 90px;
   }
 
-  #logo-caption {
-    font-size: 0.7rem;
+  #pip-logo figcaption {
+    font-size: 1rem;
   }
 
   .middle-links {
     padding: 10px;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .penguin-background-pic-ver {
