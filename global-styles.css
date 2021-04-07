@@ -7,7 +7,8 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: 100% 800px; */
-  background: linear-gradient(rgb(177, 224, 250), rgb(251, 240, 234));
+  /* background: linear-gradient(rgb(177, 224, 250), rgb(251, 240, 234)); */
+  background: linear-gradient(rgb(177, 224, 250), rgb(255, 255, 255));
   font-family: "Source Sans Pro", sans-serif;
 }
 
