@@ -6,10 +6,11 @@
     <meta name="author" content="Tommy Brader" />
     <meta
       name="description"
-      content="The Conservation Page for the Penguin Information Project - here there is useful information on penguin conservation and charity work"
+      content="The About Us Page for the Penguin Information Project - here there is information on the origin of PIP, information about the author and also a penguin ID generator"
     />
     <link rel="stylesheet" href="./global-styles.css" />
-    <title>PIP - Conservation</title>
+    <link rel="stylesheet" href="./about-us-styles.css" />
+    <title>PIP - About Us</title>
   </head>
   <body>
     <header>
@@ -39,8 +40,135 @@
 
     <main>
       <!-- About Us Introduction -->
-      <h1 class="page-title">About Us</h1>
-      <p class="standard-text">Hello.</p>
+      <section id="about-us-intro">
+        <h1 class="page-title">About Us</h1>
+        <!-- About PIP -->
+        <article id="pip-info">
+          <h2 class="sub-title">The Penguin Information Project</h2>
+          <p class="standard-text">
+            The Penguin Information Project is a website created for people to
+            learn more about all the different penguin species. The website also
+            operates as a means to increase awareness of penguin conservation
+            and the challenges penguin groups are facing as a result of humans.
+            In addition to the informative side of the website, we also have a
+            shop full of PIP merchandise, the profits of which go to penguin
+            rescue, rehabilitation and conservation charities.
+          </p>
+        </article>
+        <!-- About Me -->
+        <article id="about-me">
+          <h2 class="sub-title">About Me</h2>
+          <article id="my-id-card">
+            <figure class="id-cards">
+              <figcaption class="id-title">Penguin ID</figcaption>
+              <img
+                src="./images/me-penguin.jpg"
+                alt="Tommy Brader with African Penguins"
+                class="id-image"
+              />
+              <figcaption>
+                <b class="categories">ID N<span>&#176;</span>: </b>#1
+              </figcaption>
+              <figcaption>
+                <b class="categories">Name: </b>Tommy Brader
+              </figcaption>
+              <figcaption>
+                <b class="categories">Title: </b>PIP Founder
+              </figcaption>
+              <figcaption>
+                <b class="categories">Nationality: </b>British
+              </figcaption>
+              <figcaption>
+                <b class="categories">Favourite Penguin: </b>African
+              </figcaption>
+            </figure>
+          </article>
+          <p class="standard-text">
+            My name is Tommy, I am from Birmingham in the UK and I am the
+            creator of PIP. I have always had a love for penguins and as a small
+            child I would often learn various penguin facts in between lessons
+            at school. Although this natural fascination waned as I got older,
+            penguins still held a special place in my heart. So much so that in
+            September 2019 I took advantage of the free time I had to go and
+            volunteer at a
+            <a href="https://sanccob.co.za/" id="web-link"
+              >penguin rescue and rehabilitation centre in Port Elizabeth, South
+              Africa (SANCCOB)</a
+            >. Here I assisted in generally helping the centre run by making
+            formula for the penguins, preparing medication, washing equipment
+            and also cleaning and changing pens and pools. But of course this
+            was not all I did, I also worked hands on with the penguins! The
+            responsibilities here involved hand and tube feeding African
+            penguins of varying ages (from chicks to adults), letting the
+            penguins out to swim, helping with weighing and assessing the health
+            of the birds and also transporting them when necessary.
+          </p>
+        </article>
+      </section>
+      <!-- ID Maker -->
+      <section id="id-maker">
+        <h2 class="sub-title">Penguin ID Maker</h2>
+        <p class="standard-text">
+          Enter your details here and your very own Penguin Identification Card
+          (like mine above) will be generated!
+        </p>
+
+        <form>
+          <article id="id-inputs">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              id="id-name"
+              class="id-input"
+            />
+            <input
+              type="number"
+              name="favourite-number"
+              placeholder="Favourite Number"
+              id="id-fav-number"
+              class="id-input"
+            />
+            <input
+              type="text"
+              name="nationality"
+              placeholder="Nationality"
+              id="id-nationality"
+              class="id-input"
+            />
+            <select
+              name="favourite-penguin"
+              id="id-fav-penguin"
+              class="id-input"
+            >
+              <option value="">-- Favourite Penguin --</option>
+              <option value="adelie">Adelie</option>
+              <option value="african">African</option>
+              <option value="chinstrap">Chinstrap</option>
+              <option value="emperor">Emperor</option>
+              <option value="erect-crested">Erect-Crested</option>
+              <option value="fiordland">Fiordland</option>
+              <option value="galapagos">Galapagos</option>
+              <option value="gentoo">Gentoo</option>
+              <option value="humboldt">Humboldt</option>
+              <option value="king">King</option>
+              <option value="little">Little</option>
+              <option value="macaroni">Macaroni</option>
+              <option value="magellanic">Magellanic</option>
+              <option value="northern-rockhopper">Northern Rockhopper</option>
+              <option value="royal">Royal</option>
+              <option value="snares">Snares</option>
+              <option value="southern-rockhopper">Southern Rockhopper</option>
+              <option value="yellow-eyed">Yellow-Eyed</option>
+            </select>
+          </article>
+          <article id="id-button">
+            <button type="submit">Submit</button>
+          </article>
+        </form>
+        <h3 class="sub-sub-title">Your ID:</h3>
+        <article id="your-id-card"></article>
+      </section>
     </main>
 
     <footer>
@@ -54,5 +182,6 @@
         </ul>
       </nav>
     </footer>
+    <script src="./about-us-script.js"></script>
   </body>
 </html>

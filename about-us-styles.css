@@ -1,0 +1,88 @@
+/* ID Cards */
+#my-id-card,
+#your-id-card {
+  display: flex;
+  justify-content: center;
+}
+
+.id-cards {
+  border: 2px solid #000000;
+  border-radius: 5%;
+  padding: 20px 40px 20px 40px;
+  background-color: #f8b08c;
+  margin: 30px;
+}
+
+.id-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  display: block;
+  margin: 5px auto 15px auto;
+}
+
+.id-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.categories {
+  font-weight: bold;
+}
+
+/* Link */
+#web-link {
+  color: #000000;
+  transition: 1s;
+}
+
+#web-link:hover {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ID Maker */
+.id-input {
+  margin: 20px;
+  font-size: 1.5rem;
+  background-color: rgb(140, 210, 248);
+  border: 2px solid #000000;
+  color: #000000;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+#id-inputs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+#id-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#id-button button {
+  padding: 20px;
+  font-size: 2rem;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 10%;
+  transition: 0.2s;
+}
+
+#id-button button:hover {
+  background-color: rgb(140, 210, 248);
+  color: #ffffff;
+  cursor: pointer;
+}
