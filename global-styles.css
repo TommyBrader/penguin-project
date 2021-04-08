@@ -148,16 +148,16 @@ body,
 
 @media screen and (max-width: 500px) {
   #top-nav {
-    height: 50px;
+    height: 60px;
   }
 
   #homepage-button {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
   #top-nav li {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   #pages li a {
@@ -166,5 +166,9 @@ body,
 
   #foot-nav li {
     font-size: 0.6rem;
+  }
+
+  .page-title {
+    margin-top: 90px;
   }
 }
