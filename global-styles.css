@@ -171,4 +171,8 @@ body,
   .page-title {
     margin-top: 90px;
   }
+
+  .page-title {
+    font-size: 3.2rem;
+  }
 }
