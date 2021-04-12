@@ -58,7 +58,6 @@
 
 #penguin-background-pics {
   display: flex;
-  justify-content: center;
   margin: 20px;
   justify-content: space-evenly;
   flex-wrap: wrap;

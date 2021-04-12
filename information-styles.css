@@ -37,3 +37,103 @@
 #contents li a:hover {
   color: white;
 } */
+
+/* Continent Buttons */
+#continent-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.continent-button {
+  background-size: contain;
+  background-color: #ffffff;
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  transition: 1s;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+#info-all {
+  background-image: url(./images/world-map-all.jpg);
+}
+
+#info-all:hover {
+  background-image: url(./images/world-map-all-blue.jpg);
+  cursor: pointer;
+}
+
+#info-africa {
+  background-image: url(./images/world-map-africa.jpg);
+}
+
+#info-africa:hover {
+  background-image: url(./images/world-map-africa-blue.jpg);
+  cursor: pointer;
+}
+
+#info-antarctica {
+  background-image: url(./images/world-map-ant.jpg);
+}
+
+#info-antarctica:hover {
+  background-image: url(./images/world-map-ant-blue.jpg);
+  cursor: pointer;
+}
+
+#info-australia-and-oceania {
+  background-image: url(./images/world-map-aus.jpg);
+}
+
+#info-australia-and-oceania:hover {
+  background-image: url(./images/world-map-aus-blue.jpg);
+  cursor: pointer;
+}
+
+#info-south-america {
+  background-image: url(./images/world-map-sa.jpg);
+}
+
+#info-south-america:hover {
+  background-image: url(./images/world-map-sa-blue.jpg);
+  cursor: pointer;
+}
+
+/* Penguin Information */
+#all-penguins {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.info-images {
+  width: 250px;
+  height: 250px;
+  border-radius: 10%;
+  display: block;
+  margin: 5px auto 15px auto;
+}
+
+.penguin-information {
+  border: 2px solid #000000;
+  border-radius: 5%;
+  padding: 20px 40px 20px 40px;
+  background-color: #f8b08c;
+  margin: 20px;
+  width: 320px;
+  height: 420px;
+}
+
+.info-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.category-name {
+  font-weight: bold;
+}
