@@ -125,7 +125,7 @@
   background-color: #f8b08c;
   margin: 20px;
   width: 320px;
-  height: 420px;
+  height: 550px;
 }
 
 .info-title {
@@ -137,6 +137,22 @@
 
 .category-name {
   font-weight: bold;
+}
+
+/* Information Sources */
+.sources a {
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.sources {
+  list-style-type: circle;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+#final-source {
+  margin-bottom: 40px;
 }
 
 /* Media Queries */
@@ -154,5 +170,6 @@
 
   .penguin-information {
     width: 200px;
+    height: auto;
   }
 }
