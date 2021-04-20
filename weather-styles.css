@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 20px;
 }
 
 #weather-buttons button {
@@ -33,13 +34,13 @@
   padding: 10px;
   background-color: #ffffff;
   color: #000000;
-  margin: 5px;
+  margin: 20px 10px 40px 10px;
   border-radius: 5%;
   border: 1px solid #000000;
 }
 
 #weather-search button {
-  margin: 5px;
+  margin: 20px 10px 40px 10px;
   font-size: 1.2rem;
   padding: 10px;
   background-color: #ffffff;
@@ -72,7 +73,9 @@
   width: 150px;
   height: 150px;
   display: block;
+  border-radius: 5%;
   margin: 5px auto 15px auto;
+  background-color: #fabd9e;
 }
 
 #place-name {
