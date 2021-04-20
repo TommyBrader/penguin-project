@@ -2,14 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap");
 
 body {
-  /* background-color: rgb(251, 240, 234);
-  background-image: url(./images/background.jpg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: 100% 800px; */
-  /* background: linear-gradient(rgb(177, 224, 250), rgb(251, 240, 234)); */
   background: linear-gradient(rgb(177, 224, 250), rgb(255, 255, 255));
   font-family: "Source Sans Pro", sans-serif;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .page-title {
