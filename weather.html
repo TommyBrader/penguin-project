@@ -9,6 +9,7 @@
       content="The Weather Page for the Penguin Information Project - here you will find weather information for various penguin hotspots around the world"
     />
     <link rel="stylesheet" href="./global-styles.css" />
+    <link rel="stylesheet" href="./weather-styles.css" />
     <title>PIP - Weather</title>
   </head>
   <body>
@@ -42,6 +43,68 @@
       <!-- Weather Introduction -->
       <section id="weather-intro">
         <h1 class="page-title">Weather</h1>
+        <p class="standard-text">
+          On this page you can retrieve weather data for some of the biggest
+          penguin hotspots. Monitoring weather data like this is important as
+          the main reason for so many of the penguin species being classed as
+          endangered or vulnerable is climate change.
+        </p>
+        <p class="standard-text">
+          Climate change means that the ice so many penguins call home is
+          melting, this not only impacts their homes and breeding colonies but
+          also means a reduction in the population of krill, which is a large
+          part of the penguin diet. In Antarctica, climate change is causing
+          unprecedented rain or melted snowfall and ice, creating puddles on the
+          ground which can cause hypothermia for chicks of penguins who lay
+          their eggs on the ground as these chicks have not yet developed their
+          waterproof feathers.
+        </p>
+      </section>
+
+      <!-- Weather Information Buttons -->
+      <h2 class="sub-title">Weather Information for Penguin Hotspots</h2>
+      <section id="weather-buttons">
+        <button>Antarctica</button>
+        <button>Falkland Islands</button>
+        <button>New Zealand</button>
+        <button>Port Elizabeth</button>
+        <button>Chile</button>
+      </section>
+      <!-- Alternative Search Bar -->
+      <p class="standard-text">
+        Or alternatively, search for weather information by inputting a city
+        here:
+      </p>
+      <section id="weather-search">
+        <form>
+          <input type="text" placeholder="Location" name="weatherInput" />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <!-- Weather Result -->
+      <section id="weather-information">
+        <h2 class="sub-sub-title">Result:</h2>
+        <article id="weather-result">
+          <figure>
+            <figcaption id="place-name">Place Name</figcaption>
+            <img src="" alt="" id="weather-icon" />
+            <figcaption>
+              <b class="weather-categories">Timezone: </b>
+            </figcaption>
+            <figcaption>
+              <b class="weather-categories">Temperature: </b>
+            </figcaption>
+            <figcaption>
+              <b class="weather-categories">Sea Level: </b>
+            </figcaption>
+            <figcaption>
+              <b class="weather-categories">Rainfall: </b>
+            </figcaption>
+            <figcaption>
+              <b class="weather-categories">Snowfall: </b>
+            </figcaption>
+          </figure>
+        </article>
       </section>
     </main>
 
@@ -56,5 +119,6 @@
         </ul>
       </nav>
     </footer>
+    <script src="./weather-script.js"></script>
   </body>
 </html>

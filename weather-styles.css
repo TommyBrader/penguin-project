@@ -1,0 +1,87 @@
+/* Weather Buttons */
+#weather-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#weather-buttons button {
+  padding: 20px;
+  border: black 1px solid;
+  color: black;
+  background-color: #ffffff;
+  border-radius: 5%;
+  margin: 10px;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+
+#weather-buttons button:hover {
+  background-color: rgb(140, 210, 248);
+  color: white;
+  cursor: pointer;
+}
+
+/* Weather Search */
+#weather-search {
+  display: flex;
+  justify-content: center;
+}
+
+#weather-search input {
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 5px;
+  border-radius: 5%;
+  border: 1px solid #000000;
+}
+
+#weather-search button {
+  margin: 5px;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5%;
+  border: 1px solid #000000;
+  transition: 0.2s;
+}
+
+#weather-search button:hover {
+  background-color: rgb(140, 210, 248);
+  color: white;
+  cursor: pointer;
+}
+
+/* Weather Information Result */
+#weather-result {
+  display: flex;
+  justify-content: center;
+}
+
+#weather-result figure {
+  border: 2px solid #000000;
+  border-radius: 5%;
+  padding: 20px 40px 20px 40px;
+  background-color: #f8b08c;
+  margin: 20px auto 40px auto;
+}
+
+#weather-icon {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 5px auto 15px auto;
+}
+
+#place-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.weather-categories {
+  font-weight: bold;
+}
