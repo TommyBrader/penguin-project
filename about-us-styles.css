@@ -35,12 +35,6 @@
 /* Link */
 #web-link {
   color: #000000;
-  transition: 1s;
-}
-
-#web-link:hover {
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 /* ID Maker */
