@@ -16,7 +16,9 @@ submitForm.addEventListener('submit', function(event) {
     alert('Please Complete All of the Form to get your Penguin ID')
   }
   else {
-    document.querySelector('#your-id-card').innerHTML = `
+    document.querySelector('#id-card-output').innerHTML = `
+    <h3 class="sub-sub-title">Your ID:</h3>
+    <article id="your-id-card">
     <figure class="id-cards">
     <figcaption class="id-title">Penguin ID</figcaption>
     <img
@@ -39,6 +41,7 @@ submitForm.addEventListener('submit', function(event) {
     <figcaption>
       <b class="categories">Favourite Penguin: </b>${favPenguin.charAt(0).toUpperCase() + favPenguin.slice(1)}
     </figcaption>
-    </figure>`
+    </figure>
+    </article>`
   }
 })
