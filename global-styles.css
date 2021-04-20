@@ -176,4 +176,12 @@ body,
   .page-title {
     font-size: 3.2rem;
   }
+
+  .sub-title {
+    font-size: 2rem;
+  }
+
+  .standard-text {
+    font-size: 1rem;
+  }
 }
