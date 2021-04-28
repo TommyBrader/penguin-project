@@ -86,9 +86,18 @@ const products = [
   },
 ]
 
+let basketList = []
+
 // Display Products
 function showProducts() {
   const productsSection = document.querySelector('#products')
+
+  const basketSection = document.querySelector('#basket')
+  const defaultBasket = document.createElement('p')
+  defaultBasket.setAttribute('id', 'empty-basket')
+  defaultBasket.textContent = 'Your Basket Is Currently Empty'
+  basketSection.appendChild(defaultBasket)
+
   products.forEach((item) => {
     const productArticle = document.createElement('article')
     const productFigure = document.createElement('figure')
@@ -132,6 +141,12 @@ function addToBasketClicked(event) {
   event.preventDefault()
   itemID = event.target.dataset.id
   item = products[itemID]
+  for (i=0; i<basketList.length; i++) {
+    if (basketList[i] === item.name) {
+      alert('Item Already Added To Basket')
+      return
+    }
+  }
   console.log(item.name + ' added to basket')
   const basketSection = document.querySelector('#basket')
   const basketArticle = document.createElement('article')
@@ -175,9 +190,7 @@ function addToBasketClicked(event) {
     basketArticle.innerHTML = ''
   })
 
-  const totalPrice = document.createElement('article')
-  totalPrice.classList.add('total-price')
-
+  basketSection.innerHTML = ''
   basketFigure.appendChild(basketRemove)
   basketSection.appendChild(basketArticle)
   basketArticle.appendChild(basketFigure)
@@ -185,10 +198,16 @@ function addToBasketClicked(event) {
   basketFigure.appendChild(basketProductName)
   basketFigure.appendChild(basketQuantity)
   basketFigure.appendChild(basketPrice)
+
+  const basketTotalSection = document.querySelector('#basket-total')
+  const basketTotalAmount = document.createElement('article')
+  basketTotalAmount.setAttribute('id', 'basket-total-amount')
+
+  basketList.push(item.name)
 }
 
 
 
 
-// Call Functions
+// Call Function
 showProducts()

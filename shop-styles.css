@@ -56,6 +56,11 @@
   flex-direction: column;
 }
 
+#empty-basket {
+  margin: 0px auto 50px 40px;
+  font-size: 1.5rem;
+}
+
 .product-in-basket {
   display: flex;
   align-items: center;
@@ -88,7 +93,7 @@
 }
 
 .basket-product-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 20px;
 }
 
