@@ -1,0 +1,109 @@
+/* Products */
+#products {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 2px solid #000000;
+  border-radius: 5%;
+  padding: 20px 50px 20px 50px;
+  background-color: #f8b08c;
+  margin: 20px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-image {
+  width: 270px;
+  height: 270px;
+  border-radius: 10%;
+  display: block;
+  margin: 15px auto 15px auto;
+}
+
+.product-price {
+  font-size: 2.5rem;
+}
+
+.add-to-basket {
+  text-align: right;
+}
+
+.add-to-basket-button {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5%;
+  border: 1px solid #000000;
+  transition: 0.2s;
+}
+
+.add-to-basket-button:hover {
+  background-color: rgb(140, 210, 248);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Basket */
+#basket {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product-in-basket {
+  display: flex;
+  align-items: center;
+  background-color: #f8b08c;
+  border: 1px solid #000000;
+  margin-bottom: 30px;
+}
+
+.basket-remove {
+  font-size: 0.8rem;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 20px;
+  border: 1px solid #000000;
+  border-radius: 10%;
+  transition: 0.2s;
+}
+
+.basket-remove:hover {
+  background-color: #f26018;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.basket-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  margin: 20px;
+}
+
+.basket-product-name {
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+.basket-quantity {
+  font-size: 1.2rem;
+  margin: 20px 20px 20px auto;
+  padding: 10px;
+  background-color: #ffffff;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.basket-price {
+  margin: 20px;
+  font-size: 1.5rem;
+}
