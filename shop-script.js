@@ -254,9 +254,11 @@ basketPurchaseButton.textContent = 'Purchase'
 basketPurchaseButton.addEventListener('click', function(event) {
   event.preventDefault()
   if (basketList.length === 0) {
+    console.log('Purchase Unsuccessful - Basket Empty')
     alert('The Basket Is Empty So A Purchase Cannot be Made')
   }
   else {
+    console.log('Purchase Successful')
     const totalSpent = document.querySelector('#basket-total-amount-number')
     alert('Purchase Successful. Amount Spent: £' + totalSpent.textContent)
     basketSection.innerHTML = ''
