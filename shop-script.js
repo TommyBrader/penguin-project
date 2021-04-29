@@ -176,7 +176,7 @@ function addToBasketClicked(event) {
   basketQuantity.defaultValue = 1
   basketQuantity.min = 1
   let quantity = basketQuantity.value
-  basketQuantity.addEventListener('click', function(event) {
+  basketQuantity.addEventListener('input', function(event) {
     event.preventDefault()
     console.log(item.name + ' Quantity Increased')
     quantity = basketQuantity.value
@@ -240,7 +240,7 @@ function updateTotal(itemID) {
   const basketPriceArray = document.querySelectorAll('.basket-price')
   let total = 0
   for(i=0; i<basketPriceArray.length; i++) {
-    total = parseFloat(basketPriceArray[i].textContent) + total
+    total = (parseFloat(basketPriceArray[i].textContent) + total).toFixed(2)
   }
   basketTotalAmount.textContent = total
 }
