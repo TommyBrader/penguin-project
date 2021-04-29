@@ -1,4 +1,11 @@
-// Create Products and Basket variables
+// Create Basket Total and Empty Vairiables
+let basketList = []
+let total = ''
+const basketTotalSection = document.querySelector('#basket-total')
+const basketTotalAmount = document.createElement('article')
+basketTotalAmount.setAttribute('id', 'basket-total-amount')
+
+// Create Product List
 const products = [
   {
     id: '0',
@@ -86,8 +93,6 @@ const products = [
   },
 ]
 
-let basketList = []
-
 // Display Products
 function showProducts() {
   const productsSection = document.querySelector('#products')
@@ -148,6 +153,7 @@ function addToBasketClicked(event) {
     }
   }
   console.log(item.name + ' added to basket')
+
   const basketSection = document.querySelector('#basket')
   const basketArticle = document.createElement('article')
   const basketFigure = document.createElement('figure')
@@ -173,12 +179,13 @@ function addToBasketClicked(event) {
     event.preventDefault()
     console.log(item.name + ' Quantity Increased')
     quantity = basketQuantity.value
-    basketPrice.textContent = '£' + quantity * item.price
+    basketPrice.textContent = '£' + (quantity * item.price).toFixed(2)
+    updateTotal(itemID)
   })
 
   const basketPrice = document.createElement('figcaption')
   basketPrice.classList.add('basket-price')
-  basketPrice.textContent = '£' + quantity * item.price
+  basketPrice.textContent = '£' + (quantity * item.price).toFixed(2)
 
   const basketRemove = document.createElement('button')
   basketRemove.classList.add('basket-remove')
@@ -190,11 +197,13 @@ function addToBasketClicked(event) {
     basketArticle.innerHTML = ''
     const index = basketList.indexOf(item.name)
     basketList.splice(index, 1)
+    updateTotal(itemID)
     if (basketList.length === 0) {
       const defaultBasket = document.createElement('p')
       defaultBasket.setAttribute('id', 'empty-basket')
       defaultBasket.textContent = 'Your Basket Is Currently Empty'
       basketSection.appendChild(defaultBasket)
+      basketTotalAmount.textContent = ''
     }
   })
 
@@ -208,15 +217,26 @@ function addToBasketClicked(event) {
   basketFigure.appendChild(basketProductName)
   basketFigure.appendChild(basketQuantity)
   basketFigure.appendChild(basketPrice)
+  basketTotalSection.appendChild(basketTotalAmount)
 
-  const basketTotalSection = document.querySelector('#basket-total')
-  const basketTotalAmount = document.createElement('article')
-  basketTotalAmount.setAttribute('id', 'basket-total-amount')
+  updateTotal(itemID)
 
   basketList.push(item.name)
 }
 
-
+// A function to be called when the total price needs updating
+function updateTotal(itemID) {
+  console.log('Function Called')
+  item = products[itemID]
+  console.log(basketTotalAmount.innerText)
+  if (basketTotalAmount.innerText === '') {
+    total = item.price
+  }
+  else {
+    total = (item.price + parseFloat(basketTotalAmount.innerText)).toFixed(2)
+  }
+  basketTotalAmount.innerText = total
+}
 
 
 // Call Function
