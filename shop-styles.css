@@ -115,5 +115,27 @@
 
 #basket-total-amount {
   font-size: 1.5rem;
-  margin: 50px;
+  margin: 20px;
+}
+
+#basket-purchase-section {
+  display: flex;
+  justify-content: center;
+}
+
+#basket-purchase-button {
+  margin: 0px auto 50px auto;
+  padding: 20px;
+  font-size: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 10%;
+  transition: 0.2s;
+}
+
+#basket-purchase-button:hover {
+  cursor: pointer;
+  background-color: rgb(140, 210, 248);
+  color: #ffffff;
 }

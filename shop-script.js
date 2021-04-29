@@ -1,11 +1,18 @@
-// Create Basket Total and Empty Vairiables
+// Creates Basket and Empty Vairiables
 let basketList = []
 let total = ''
+const basketSection = document.querySelector('#basket')
+const defaultBasket = document.createElement('p')
+defaultBasket.setAttribute('id', 'empty-basket')
+defaultBasket.textContent = 'Your Basket Is Currently Empty'
+basketSection.appendChild(defaultBasket)
 const basketTotalSection = document.querySelector('#basket-total')
-const basketTotalAmount = document.createElement('article')
-basketTotalAmount.setAttribute('id', 'basket-total-amount')
+const basketTotalArticle = document.createElement('article')
+basketTotalArticle.setAttribute('id', 'basket-total-amount')
+basketTotalArticle.textContent = 'Total: £'
+const basketTotalAmount = document.createElement('span')
 
-// Create Product List
+// Creates Product List
 const products = [
   {
     id: '0',
@@ -96,12 +103,6 @@ const products = [
 // Display Products
 function showProducts() {
   const productsSection = document.querySelector('#products')
-
-  const basketSection = document.querySelector('#basket')
-  const defaultBasket = document.createElement('p')
-  defaultBasket.setAttribute('id', 'empty-basket')
-  defaultBasket.textContent = 'Your Basket Is Currently Empty'
-  basketSection.appendChild(defaultBasket)
 
   products.forEach((item) => {
     const productArticle = document.createElement('article')
@@ -204,12 +205,14 @@ function addToBasketClicked(event) {
       defaultBasket.textContent = 'Your Basket Is Currently Empty'
       basketSection.appendChild(defaultBasket)
       basketTotalAmount.textContent = ''
+      basketTotalSection.innerHTML = ''
     }
   })
 
   if (basketList.length === 0) {
     basketSection.innerHTML = ''
   }
+
   basketFigure.appendChild(basketRemove)
   basketSection.appendChild(basketArticle)
   basketArticle.appendChild(basketFigure)
@@ -217,7 +220,8 @@ function addToBasketClicked(event) {
   basketFigure.appendChild(basketProductName)
   basketFigure.appendChild(basketQuantity)
   basketFigure.appendChild(basketPrice)
-  basketTotalSection.appendChild(basketTotalAmount)
+  basketTotalSection.appendChild(basketTotalArticle)
+  basketTotalArticle.appendChild(basketTotalAmount)
 
   updateTotal(itemID)
 
@@ -226,17 +230,42 @@ function addToBasketClicked(event) {
 
 // A function to be called when the total price needs updating
 function updateTotal(itemID) {
-  console.log('Function Called')
+  console.log('Update Total Function Called')
   item = products[itemID]
-  console.log(basketTotalAmount.innerText)
-  if (basketTotalAmount.innerText === '') {
+  if (basketTotalAmount.textContent === '') {
     total = item.price
   }
   else {
     total = (item.price + parseFloat(basketTotalAmount.innerText)).toFixed(2)
   }
-  basketTotalAmount.innerText = total
+  basketTotalAmount.textContent = total
 }
+
+// Purchase Button
+const basketPurchaseSection = document.querySelector('#basket-purchase-section')
+const basketPurchaseButton = document.createElement('button')
+basketPurchaseButton.setAttribute('id', 'basket-purchase-button')
+basketPurchaseButton.type = 'button'
+basketPurchaseButton.textContent = 'Purchase'
+basketPurchaseButton.addEventListener('click', function(event) {
+  event.preventDefault()
+  if (basketList.length === 0) {
+    alert('The Basket Is Empty So A Purchase Cannot be Made')
+  }
+  else {
+    alert('Purchase Successful')
+    basketSection.innerHTML = ''
+    const defaultBasket = document.createElement('p')
+    defaultBasket.setAttribute('id', 'empty-basket')
+    defaultBasket.textContent = 'Your Basket Is Currently Empty'
+    basketSection.appendChild(defaultBasket)
+    basketTotalAmount.textContent = ''
+    basketTotalSection.innerHTML = ''
+    basketList = []
+  }
+})
+
+basketPurchaseSection.appendChild(basketPurchaseButton)
 
 
 // Call Function
