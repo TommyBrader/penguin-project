@@ -237,12 +237,19 @@ function addToBasketClicked(event) {
 // A function to be called when the total price needs updating
 function updateTotal(itemID) {
   console.log('Update Total Function Called')
-  item = products[itemID]
-  if (basketTotalAmount.textContent === '') {
-    total = item.price
-  }
-  else {
-    total = (item.price + parseFloat(basketTotalAmount.innerText)).toFixed(2)
+  // item = products[itemID]
+  // if (basketTotalAmount.textContent === '') {
+  //   total = item.price
+  // }
+  // else {
+  //   total = (item.price + parseFloat(basketTotalAmount.innerText)).toFixed(2)
+  // }
+  // basketTotalAmount.textContent = total
+
+  const basketPriceArray = document.querySelectorAll('.basket-price')
+  let total = 0
+  for(i=0; i<basketPriceArray.length; i++) {
+    total = parseFloat(basketPriceArray[i].textContent) + total
   }
   basketTotalAmount.textContent = total
 }
