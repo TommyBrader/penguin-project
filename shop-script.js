@@ -11,6 +11,7 @@ const basketTotalArticle = document.createElement('article')
 basketTotalArticle.setAttribute('id', 'basket-total-amount')
 basketTotalArticle.textContent = 'Total: £'
 const basketTotalAmount = document.createElement('span')
+basketTotalAmount.setAttribute('id', 'basket-total-amount-number')
 
 // Creates Product List
 const products = [
@@ -129,7 +130,6 @@ function showProducts() {
     addToBasketButton.type = 'button'
     addToBasketButton.textContent = 'Add to Basket'
     addToBasketButton.dataset.id = item.id
-    const productID = item.id
     addToBasketButton.addEventListener('click', addToBasketClicked)
 
     productsSection.appendChild(productArticle)
@@ -237,15 +237,6 @@ function addToBasketClicked(event) {
 // A function to be called when the total price needs updating
 function updateTotal(itemID) {
   console.log('Update Total Function Called')
-  // item = products[itemID]
-  // if (basketTotalAmount.textContent === '') {
-  //   total = item.price
-  // }
-  // else {
-  //   total = (item.price + parseFloat(basketTotalAmount.innerText)).toFixed(2)
-  // }
-  // basketTotalAmount.textContent = total
-
   const basketPriceArray = document.querySelectorAll('.basket-price')
   let total = 0
   for(i=0; i<basketPriceArray.length; i++) {
@@ -266,7 +257,8 @@ basketPurchaseButton.addEventListener('click', function(event) {
     alert('The Basket Is Empty So A Purchase Cannot be Made')
   }
   else {
-    alert('Purchase Successful')
+    const totalSpent = document.querySelector('#basket-total-amount-number')
+    alert('Purchase Successful. Amount Spent: £' + totalSpent.textContent)
     basketSection.innerHTML = ''
     const defaultBasket = document.createElement('p')
     defaultBasket.setAttribute('id', 'empty-basket')
