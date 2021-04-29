@@ -4,7 +4,7 @@ function clearWeatherInfo() {
   weatherInfoSection.innerHTML = ''
 }
 
-// Style and Select Weather Information
+// Styles and Selects Weather Information
 function displayWeatherInfo(data) {
   const weatherInfoSection = document.querySelector('#weather-information')
   const hoursDifferent = parseInt(data.timezone)/3600
