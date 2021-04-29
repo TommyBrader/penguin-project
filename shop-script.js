@@ -190,7 +190,9 @@ function addToBasketClicked(event) {
     basketArticle.innerHTML = ''
   })
 
-  basketSection.innerHTML = ''
+  if (basketList.length === 0) {
+    basketSection.innerHTML = ''
+  }
   basketFigure.appendChild(basketRemove)
   basketSection.appendChild(basketArticle)
   basketArticle.appendChild(basketFigure)
