@@ -188,6 +188,14 @@ function addToBasketClicked(event) {
     event.preventDefault()
     console.log('Remove Item Clicked')
     basketArticle.innerHTML = ''
+    const index = basketList.indexOf(item.name)
+    basketList.splice(index, 1)
+    if (basketList.length === 0) {
+      const defaultBasket = document.createElement('p')
+      defaultBasket.setAttribute('id', 'empty-basket')
+      defaultBasket.textContent = 'Your Basket Is Currently Empty'
+      basketSection.appendChild(defaultBasket)
+    }
   })
 
   if (basketList.length === 0) {
