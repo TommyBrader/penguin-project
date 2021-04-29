@@ -180,13 +180,18 @@ function addToBasketClicked(event) {
     event.preventDefault()
     console.log(item.name + ' Quantity Increased')
     quantity = basketQuantity.value
-    basketPrice.textContent = '£' + (quantity * item.price).toFixed(2)
+    basketPriceSymbol.textContent = '£'
+    basketPrice.textContent = (quantity * item.price).toFixed(2)
+    basketPriceSymbol.appendChild(basketPrice)
     updateTotal(itemID)
   })
 
-  const basketPrice = document.createElement('figcaption')
+  const basketPriceSymbol = document.createElement('figcaption')
+  basketPriceSymbol.classList.add('basket-price-symbol')
+  basketPriceSymbol.textContent = '£'
+  const basketPrice = document.createElement('span')
   basketPrice.classList.add('basket-price')
-  basketPrice.textContent = '£' + (quantity * item.price).toFixed(2)
+  basketPrice.textContent = (quantity * item.price).toFixed(2)
 
   const basketRemove = document.createElement('button')
   basketRemove.classList.add('basket-remove')
@@ -219,7 +224,8 @@ function addToBasketClicked(event) {
   basketFigure.appendChild(basketImage)
   basketFigure.appendChild(basketProductName)
   basketFigure.appendChild(basketQuantity)
-  basketFigure.appendChild(basketPrice)
+  basketFigure.appendChild(basketPriceSymbol)
+  basketPriceSymbol.appendChild(basketPrice)
   basketTotalSection.appendChild(basketTotalArticle)
   basketTotalArticle.appendChild(basketTotalAmount)
 

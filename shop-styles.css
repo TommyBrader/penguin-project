@@ -108,9 +108,14 @@
   text-align: center;
 }
 
+.basket-price-symbol,
 .basket-price {
-  margin: 20px;
+  margin: 0px;
   font-size: 1.5rem;
+}
+
+.basket-price {
+  margin-right: 30px;
 }
 
 #basket-total-amount {
