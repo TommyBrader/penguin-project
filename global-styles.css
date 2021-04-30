@@ -140,13 +140,13 @@ body,
 }
 
 /* Media Queries */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 740px) {
   #top-nav li {
     font-size: 1.3rem;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   #top-nav {
     height: 50px;
   }
