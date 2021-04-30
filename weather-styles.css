@@ -13,8 +13,8 @@
 
 #weather-buttons button {
   padding: 20px;
-  border: black 1px solid;
-  color: black;
+  border: 1px solid #000000;
+  color: #000000;
   background-color: #ffffff;
   border-radius: 5%;
   margin: 10px;
@@ -23,8 +23,8 @@
 }
 
 #weather-buttons button:hover {
-  background-color: rgb(140, 210, 248);
-  color: white;
+  background-color: #8cd2f8;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -55,8 +55,8 @@
 }
 
 #weather-search button:hover {
-  background-color: rgb(140, 210, 248);
-  color: white;
+  background-color: #8cd2f8;
+  color: #ffffff;
   cursor: pointer;
 }
 

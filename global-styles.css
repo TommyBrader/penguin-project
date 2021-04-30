@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap");
 
 body {
-  background: linear-gradient(rgb(177, 224, 250), rgb(255, 255, 255));
+  background: linear-gradient(#b1e0fa, #ffffff);
   font-family: "Source Sans Pro", sans-serif;
   height: 100%;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@ body {
   margin-top: 120px;
   margin-left: 20px;
   font-size: 3.5rem;
-  text-decoration: underline solid rgb(140, 210, 248);
+  text-decoration: underline solid #8cd2f8;
 }
 
 .standard-text {
@@ -54,11 +54,11 @@ body,
 }
 
 #top-nav {
-  background-color: rgb(140, 210, 248);
+  background-color: #8cd2f8;
   height: 90px;
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #000000;
   position: fixed;
   width: 100%;
   top: 0;
@@ -76,13 +76,13 @@ body,
 
 #pages li a {
   text-decoration: none;
-  color: black;
+  color: #000000;
   padding: 0 20px;
   transition: 0.2s;
 }
 
 #pages li a:hover {
-  color: white;
+  color: #ffffff;
 }
 
 #homepage-button:hover {
@@ -101,13 +101,13 @@ body,
 }
 
 #foot-nav {
-  background-color: rgb(11, 142, 213);
+  background-color: #0b8ed5;
   position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 #foot-nav #author-information {
@@ -128,12 +128,12 @@ body,
 
 #author-information li a {
   text-decoration: none;
-  color: black;
+  color: #000000;
   transition: 0.2s;
 }
 
 #author-information li a:hover {
-  color: white;
+  color: #ffffff;
 }
 
 /* Media Queries */

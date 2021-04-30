@@ -13,7 +13,7 @@
 }
 
 #pip-logo figcaption {
-  text-decoration: underline solid rgb(140, 210, 248);
+  text-decoration: underline solid #8cd2f8;
   margin-bottom: 10px;
   font-size: 1.2rem;
   text-align: center;
@@ -32,9 +32,9 @@
 
 .middle-links {
   padding: 20px;
-  border: black 1px solid;
+  border: 1px solid #000000;
   text-decoration: none;
-  color: black;
+  color: #000000;
   border-radius: 10%;
   margin: 5px;
   font-size: 1.2rem;
@@ -42,8 +42,8 @@
 }
 
 .middle-links:hover {
-  background-color: rgb(140, 210, 248);
-  color: white;
+  background-color: #8cd2f8;
+  color: #ffffff;
 }
 
 /* Penguin Background Pictures */
