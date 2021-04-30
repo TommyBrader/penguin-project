@@ -240,9 +240,9 @@ function updateTotal(itemID) {
   const basketPriceArray = document.querySelectorAll('.basket-price')
   let total = 0
   for(i=0; i<basketPriceArray.length; i++) {
-    total = (parseFloat(basketPriceArray[i].textContent) + total).toFixed(2)
+    total = parseFloat(basketPriceArray[i].textContent) + total
   }
-  basketTotalAmount.textContent = total
+  basketTotalAmount.textContent = (total).toFixed(2)
 }
 
 // Purchase Button
