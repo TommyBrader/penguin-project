@@ -9,26 +9,29 @@ body {
   background-attachment: fixed;
 }
 
+.page-title,
+.standard-text,
+.sub-title,
+.sub-sub-title {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .page-title {
   margin-top: 120px;
-  margin-left: 20px;
   font-size: 3.5rem;
   text-decoration: underline solid #8cd2f8;
 }
 
 .standard-text {
-  margin-left: 20px;
-  margin-right: 20px;
   font-size: 1.2rem;
 }
 
 .sub-title {
-  margin-left: 20px;
   font-size: 2.5rem;
 }
 
 .sub-sub-title {
-  margin-left: 20px;
   font-size: 2rem;
 }
 

@@ -60,6 +60,11 @@
   cursor: pointer;
 }
 
+::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
 /* Weather Information Result */
 #weather-result {
   display: flex;
