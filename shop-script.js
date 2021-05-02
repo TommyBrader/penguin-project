@@ -1,6 +1,5 @@
 // Creates Basket and Empty Vairiables
 let basketList = []
-let total = ''
 const basketSection = document.querySelector('#basket')
 const defaultBasket = document.createElement('p')
 defaultBasket.setAttribute('id', 'empty-basket')
